@@ -12,7 +12,7 @@ The yellow is a polynomial fitted to waypoints and the green line represents the
 MPC attempts to approximate a continuous reference trajectory by means of discrete paths between actuations. Larger values of time-step (discretization) result in less frequent actuations, which makes it harder to accurately approximate a continuous reference trajectory. This is sometimes called "discretization error".
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-Controls-MPCCarND-MPC-Project/blob/master/pics/length-of-trajectory-and-timestep-duration-02.png" width="480" alt="simulator" />
+<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/length-of-trajectory-and-timestep-duration-02.png" width="480" alt="simulator" />
 </p>
 
 The blue line is the reference trajectory and the red line the trajectory computed by Model Predictive Control. In this example the horizon has 7 steps, N, and the space in between white pebbles signifies the time elapsed, dt (the picture is from Udacity Self-Driving Car Nanodegree lections).
