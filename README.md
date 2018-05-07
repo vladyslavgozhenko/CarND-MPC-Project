@@ -22,7 +22,7 @@ Model predictive control uses optimizer, that defines input controls and minimiz
 The algorithm of the MPC is show here (we will go later to details, how to select the constrains, size of the time steps and the time horizon T):
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/mpc_model.png" width="480" alt="simulator" />
+<img srchttps://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/MPC_model.png" width="480" alt="simulator" />
 </p>
 MPC algoritm (the picture is from Udacity Self-Driving Car Nanodegree lections).
 
