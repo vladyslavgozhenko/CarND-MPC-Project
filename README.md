@@ -3,7 +3,7 @@
 In this project I'll implement Model Predictive Control to drive the car around the track. The simulator will provide coordinates of the desired car trajectory  and car's current coordinates and orientation. The model will calculate the steering angle and throttle. Additionally, there's a 100 millisecond latency between actuations commands.
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/mpc_anime.gif" width="480" alt="simulator" />
+<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/mpc_anime1.gif" width="480" alt="simulator" />
 </p>
 The yellow is a polynomial fitted to waypoints and the green line represents the x and y coordinates of the MPC trajectory.
 
