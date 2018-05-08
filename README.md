@@ -3,7 +3,7 @@
 In this project I'll implement Model Predictive Control to drive the car around the track. The simulator will provide coordinates of the desired car trajectory  and car's current coordinates and orientation. The model will calculate the steering angle and throttle. Additionally, there's a 100 millisecond latency between actuations commands.
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-Controls-MPC/blob/master/pics/mpc_anime.gif" width="480" alt="simulator" />
+<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/mpc_anime1.gif" width="480" alt="simulator" />
 </p>
 The yellow is a polynomial fitted to waypoints and the green line represents the x and y coordinates of the MPC trajectory.
 
@@ -12,7 +12,7 @@ The yellow is a polynomial fitted to waypoints and the green line represents the
 MPC attempts to approximate a continuous reference trajectory by means of discrete paths between actuations. Larger values of time-step (discretization) result in less frequent actuations, which makes it harder to accurately approximate a continuous reference trajectory. This is sometimes called "discretization error".
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-Controls-MPC/blob/master/pics/length-of-trajectory-and-timestep-duration-02.png" width="480" alt="simulator" />
+<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/length-of-trajectory-and-timestep-duration-02.png" width="480" alt="simulator" />
 </p>
 
 The blue line is the reference trajectory and the red line the trajectory computed by Model Predictive Control. In this example the horizon has 7 steps, N, and the space in between white pebbles signifies the time elapsed, dt (the picture is from Udacity Self-Driving Car Nanodegree lections).
@@ -22,7 +22,7 @@ Model predictive control uses optimizer, that defines input controls and minimiz
 The algorithm of the MPC is show here (we will go later to details, how to select the constrains, size of the time steps and the time horizon T):
 
 <p align='center'>
-<img src="https://github.com/vladyslavgozhenko/CarND-Controls-MPC/blob/master/pics/mpc_model.png" width="480" alt="simulator" />
+<img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/MPC_model.png" width="480" alt="simulator" />
 </p>
 MPC algoritm (the picture is from Udacity Self-Driving Car Nanodegree lections).
 
@@ -36,7 +36,7 @@ the product of two other variables N and dt defines the prediction horizon T. Id
 
 The goal of Model Predictive Control is to optimize the control inputs: [δ,a][\delta, a][δ,a]. An optimizer will tune these inputs until a low cost vector of control inputs is found. The length of this vector is determined by N:
 
-[δ1,a1,δ2,a2,...,δN−1,aN−1] [\delta_1, a_1, \delta_2, a_2 , ..., \delta_{N-1}, a_{N-1}] [δ1​,a1​,δ2​,a2​,...,δN−1​,aN−1​]
+    [δ1,a1,δ2,a2,...,δN−1,aN−1] [\delta_1, a_1, \delta_2, a_2 , ..., \delta_{N-1}, a_{N-1}] [δ1​,a1​,δ2​,a2​,...,δN−1​,aN−1​]
 
 Thus N determines the number of variables optimized by the MPC. This is also the major driver of computational cost.
 
@@ -77,7 +77,7 @@ A contributing factor to latency is actuator dynamics. For example the time elap
     double px_t1 = v * latency;
     double py_t1 = 0.0;
     double psi_t1 = (v / 2.67) * (-1 * delta) * latency;
-    double v_t1 = v + alpha * latency;// coefficient alpha is a throttle
+    double v_t1 = v + alpha * latency;// coefficient alpha is the throttle
     double cte_t1 = cte + v * sin(epsi) * latency;
     double epsi_t1 = epsi + (v / 2.67) * (-1 * delta) * latency;
 
