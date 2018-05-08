@@ -1,0 +1,10 @@
+prefix=/media/vlad/5600486000484967/Experiments/c++/CarND-MPC-Project/Ipopt-3.12.7
+libdir=/media/vlad/5600486000484967/Experiments/c++/CarND-MPC-Project/Ipopt-3.12.7/ThirdParty/Lapack
+
+Name: Lapack
+Description: Linear algebra package
+URL: https://projects.coin-or.org/BuildTools
+Version: 1.5.6
+Libs: ${libdir}/libcoinlapack.la -lblas   -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. -lgfortran -lm -lquadmath
+Cflags:
+Requires: 
